@@ -5,7 +5,7 @@ struct ContentView: View {
         VStack(spacing: 20) {
             Text("🥚")
                 .font(.system(size: 80))
-            Text("Hello, Tamagotchi!")
+            Text("Hello, Sodachi!")
                 .font(.largeTitle)
                 .fontWeight(.bold)
             Text("Your adventure begins here.")

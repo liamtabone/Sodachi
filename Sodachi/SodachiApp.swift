@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct TamagotchiApp: App {
+struct SodachiApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
