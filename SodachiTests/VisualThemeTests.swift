@@ -38,6 +38,27 @@ final class VisualThemeTests: XCTestCase {
         XCTAssertFalse(StubTheme().name.isEmpty)
     }
 
+    // MARK: - StaticImageTheme
+
+    func testStaticImageThemeID() {
+        XCTAssertEqual(StaticImageTheme.themeID, "static")
+    }
+
+    func testStaticImageThemeReturnsOneFramePerCombination() {
+        let theme = StaticImageTheme()
+        for stage in allStages() {
+            for state in allStates() {
+                let animation = theme.animation(for: stage, state: state)
+                XCTAssertEqual(animation.frames.count, 1, "Expected exactly one frame for \(stage)/\(state)")
+                XCTAssertEqual(animation.frameDuration, 0)
+            }
+        }
+    }
+
+    func testStaticImageThemeNameIsNonEmpty() {
+        XCTAssertFalse(StaticImageTheme().name.isEmpty)
+    }
+
     // MARK: - Helpers
 
     private func allStages() -> [PetLifecycleStage] {

@@ -37,6 +37,8 @@
 		1544E3BD135C4D5FAFD7FB44 /* PetVisualState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7621428338234135A42B0389 /* PetVisualState.swift */; };
 		4284A4B318BB422B948DD3C8 /* PetVisualTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABECBCD0CE344B70B76F31CE /* PetVisualTheme.swift */; };
 		D0D0B8577F674084863F6B85 /* PetVisualTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABECBCD0CE344B70B76F31CE /* PetVisualTheme.swift */; };
+		832A70A4BD21412C8BC95F87 /* StaticImageTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13340D8F6DC24566AB58CEC4 /* StaticImageTheme.swift */; };
+		1EAA1BEE7344402D8122F583 /* StaticImageTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13340D8F6DC24566AB58CEC4 /* StaticImageTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,7 @@
 		F214EB6E2F6763DD005040B0 /* LifecycleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecycleEngine.swift; sourceTree = "<group>"; };
 		7621428338234135A42B0389 /* PetVisualState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetVisualState.swift; sourceTree = "<group>"; };
 		ABECBCD0CE344B70B76F31CE /* PetVisualTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetVisualTheme.swift; sourceTree = "<group>"; };
+		13340D8F6DC24566AB58CEC4 /* StaticImageTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticImageTheme.swift; sourceTree = "<group>"; };
 		F214EB702F6763DD005040B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F214EB712F6763DD005040B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F214EB722F6763DD005040B0 /* SodachiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SodachiApp.swift; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				ABECBCD0CE344B70B76F31CE /* PetVisualTheme.swift */,
+				13340D8F6DC24566AB58CEC4 /* StaticImageTheme.swift */,
 			);
 			path = VisualThemes;
 			sourceTree = "<group>";
@@ -312,6 +316,7 @@
 				F214EB892F6763DD005040B0 /* DecayRates.swift in Sources */,
 				9258C5484CA543B0AF4D1E8B /* PetVisualState.swift in Sources */,
 				4284A4B318BB422B948DD3C8 /* PetVisualTheme.swift in Sources */,
+				832A70A4BD21412C8BC95F87 /* StaticImageTheme.swift in Sources */,
 				B3E21CA62B8F4D70A1C53E00 /* ContentView.swift in Sources */,
 				B3E21CA52B8F4D70A1C53E00 /* SodachiApp.swift in Sources */,
 			);
@@ -331,6 +336,7 @@
 				F214EB7B2F6763DD005040B0 /* DecayRates.swift in Sources */,
 				1544E3BD135C4D5FAFD7FB44 /* PetVisualState.swift in Sources */,
 				D0D0B8577F674084863F6B85 /* PetVisualTheme.swift in Sources */,
+				1EAA1BEE7344402D8122F583 /* StaticImageTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
