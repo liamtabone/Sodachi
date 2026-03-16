@@ -14,6 +14,13 @@ final class Pet {
     @Relationship(deleteRule: .cascade)
     var stats: PetStats?
 
+    /// The visual state to display based on current stats and lifecycle stage.
+    var visualState: PetVisualState {
+        guard let stats, lifecycleStage.isAlive else { return .dead }
+        if stats.health < 30 { return .sick }
+        return .idle
+    }
+
     init(
         name: String,
         species: String = "default",

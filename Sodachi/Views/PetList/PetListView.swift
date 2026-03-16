@@ -14,7 +14,7 @@ struct PetListView: View {
             List {
                 Section {
                     ForEach(alivePets) { pet in
-                        NavigationLink(destination: Text("Game screen coming soon")) {
+                        NavigationLink(destination: GameScreenView(pet: pet)) {
                             PetRowView(pet: pet)
                         }
                     }
