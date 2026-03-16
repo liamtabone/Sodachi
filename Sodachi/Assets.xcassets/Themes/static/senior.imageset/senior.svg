@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Arms drooping -->
+  <ellipse cx="18" cy="70" rx="10" ry="5.5" fill="#8D9E7E" stroke="#5D7052" stroke-width="2" transform="rotate(20 18 70)"/>
+  <ellipse cx="82" cy="70" rx="10" ry="5.5" fill="#8D9E7E" stroke="#5D7052" stroke-width="2" transform="rotate(-20 82 70)"/>
+  <!-- Body — slightly hunched/wider -->
+  <ellipse cx="50" cy="60" rx="30" ry="30" fill="#8D9E7E" stroke="#5D7052" stroke-width="2.5"/>
+  <!-- Tired half-closed eyes -->
+  <ellipse cx="42" cy="51" rx="5.5" ry="4" fill="#2C2C2C"/>
+  <ellipse cx="58" cy="51" rx="5.5" ry="4" fill="#2C2C2C"/>
+  <ellipse cx="44" cy="50" rx="2" ry="1.5" fill="white"/>
+  <ellipse cx="60" cy="50" rx="2" ry="1.5" fill="white"/>
+  <!-- Heavy eyelids -->
+  <path d="M 36.5 49 Q 42 45 47.5 49" stroke="#5D7052" stroke-width="2.5" fill="none"/>
+  <path d="M 52.5 49 Q 58 45 63.5 49" stroke="#5D7052" stroke-width="2.5" fill="none"/>
+  <!-- Slight frown -->
+  <path d="M 43 65 Q 50 61 57 65" stroke="#2C2C2C" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Wrinkle lines -->
+  <path d="M 34 56 Q 37 54 40 56" stroke="#5D7052" stroke-width="1.5" fill="none"/>
+  <path d="M 60 56 Q 63 54 66 56" stroke="#5D7052" stroke-width="1.5" fill="none"/>
+</svg>

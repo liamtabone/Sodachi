@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Shell -->
+  <ellipse cx="50" cy="57" rx="28" ry="35" fill="#FFF3B0" stroke="#E8C000" stroke-width="2.5"/>
+  <!-- Subtle highlight -->
+  <ellipse cx="42" cy="42" rx="8" ry="12" fill="white" opacity="0.35" transform="rotate(-15 42 42)"/>
+  <!-- Crack lines -->
+  <polyline points="50,30 47,38 53,43 49,50" stroke="#C9A800" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
