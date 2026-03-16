@@ -112,7 +112,7 @@ private struct ThemeCard: View {
                 }
                 Text(theme.name)
                     .font(.caption)
-                    .foregroundStyle(isSelected ? .accent : .secondary)
+                    .foregroundStyle(isSelected ? Color.accentColor : Color.secondary)
             }
         }
         .buttonStyle(.plain)
