@@ -140,6 +140,7 @@ private struct ActionButtonsView: View {
     private let sleepAction = SleepAction()
     private let playAction = PlayAction()
     private let cleanAction = CleanAction()
+    private let medicineAction = MedicineAction()
 
     private struct Action: Identifiable {
         let id = UUID()
@@ -193,10 +194,21 @@ private struct ActionButtonsView: View {
         switch label {
         case "Feed":  showingFeedMenu = true
         case "Play":  performPlay()
-        case "Clean": performClean()
-        case "Sleep": performSleep()
+        case "Clean":    performClean()
+        case "Medicine": performMedicine()
+        case "Sleep":    performSleep()
         case "Wake":  performWake()
         default: break
+        }
+    }
+
+    private func performMedicine() {
+        onVisualStateChange(.sick)
+        medicineAction.administer(pet: pet)
+        try? context.save()
+        Task {
+            try? await Task.sleep(nanoseconds: 1_500_000_000)
+            await MainActor.run { onVisualStateChange(nil) }
         }
     }
 
