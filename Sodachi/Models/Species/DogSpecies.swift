@@ -10,6 +10,7 @@ struct DogSpecies: PetSpecies {
             hungerPerHour: 12.0,
             happinessPerHour: 10.0,
             energyPerHour: 6.0,
+            energyRecoveryPerHour: 25.0,
             healthPerHourFromHunger: 5.0,
             healthPerHourFromSadness: 3.0,
             criticalHungerThreshold: 20.0,

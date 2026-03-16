@@ -10,6 +10,7 @@ final class Pet {
     var lastUpdatedAt: Date
     var lifecycleStage: PetLifecycleStage
     var visualThemeID: String
+    var isSleeping: Bool
 
     @Relationship(deleteRule: .cascade)
     var stats: PetStats?
@@ -17,6 +18,7 @@ final class Pet {
     /// The visual state to display based on current stats and lifecycle stage.
     var visualState: PetVisualState {
         guard let stats, lifecycleStage.isAlive else { return .dead }
+        if isSleeping { return .sleeping }
         if stats.health < 30 { return .sick }
         return .idle
     }
@@ -32,6 +34,7 @@ final class Pet {
         self.lastUpdatedAt = .now
         self.lifecycleStage = .egg
         self.visualThemeID = visualThemeID
+        self.isSleeping = false
         let s = SpeciesRegistry.species(for: species).startingStats
         self.stats = PetStats(
             hunger: s.hunger,

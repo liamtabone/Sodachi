@@ -9,6 +9,7 @@ struct CatSpecies: PetSpecies {
             hungerPerHour: 8.0,
             happinessPerHour: 5.0,
             energyPerHour: 4.0,
+            energyRecoveryPerHour: 20.0,
             healthPerHourFromHunger: 4.0,
             healthPerHourFromSadness: 2.0,
             criticalHungerThreshold: 20.0,

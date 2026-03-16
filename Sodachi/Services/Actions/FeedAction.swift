@@ -15,7 +15,7 @@ struct FeedAction {
 
     /// Applies feeding effects to `pet`. Does nothing if the pet is dead or has no stats.
     func feed(pet: Pet, foodType: FoodType) {
-        guard let stats = pet.stats, pet.lifecycleStage.isAlive, pet.lifecycleStage != .egg else { return }
+        guard let stats = pet.stats, pet.lifecycleStage.isAlive, pet.lifecycleStage != .egg, !pet.isSleeping else { return }
 
         switch foodType {
         case .meal:

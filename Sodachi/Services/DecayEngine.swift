@@ -16,7 +16,11 @@ struct DecayEngine {
         // Primary stat decay
         stats.hunger = max(0, stats.hunger - rates.hungerPerHour * hours)
         stats.happiness = max(0, stats.happiness - rates.happinessPerHour * hours)
-        stats.energy = max(0, stats.energy - rates.energyPerHour * hours)
+        if pet.isSleeping {
+            stats.energy = min(100, stats.energy + rates.energyRecoveryPerHour * hours)
+        } else {
+            stats.energy = max(0, stats.energy - rates.energyPerHour * hours)
+        }
         stats.age += elapsed
 
         // Secondary: health drops when hunger is critically low

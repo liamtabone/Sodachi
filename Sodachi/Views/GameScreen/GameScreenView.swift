@@ -132,6 +132,7 @@ private struct ActionButtonsView: View {
     @Environment(\.modelContext) private var context
     @State private var showingFeedMenu = false
     private let feedAction = FeedAction()
+    private let sleepAction = SleepAction()
 
     private struct Action: Identifiable {
         let id = UUID()
@@ -139,15 +140,17 @@ private struct ActionButtonsView: View {
         let icon: String
     }
 
-    private let actions: [Action] = [
-        .init(label: "Feed",       icon: "fork.knife"),
-        .init(label: "Play",       icon: "gamecontroller"),
-        .init(label: "Sleep",      icon: "moon.fill"),
-        .init(label: "Clean",      icon: "sparkles"),
-        .init(label: "Medicine",   icon: "cross.case"),
-        .init(label: "Discipline", icon: "hand.raised"),
-        .init(label: "Toilet",     icon: "toilet"),
-    ]
+    private var actions: [Action] {
+        [
+            .init(label: "Feed",       icon: "fork.knife"),
+            .init(label: "Play",       icon: "gamecontroller"),
+            .init(label: pet.isSleeping ? "Wake" : "Sleep", icon: pet.isSleeping ? "sun.max.fill" : "moon.fill"),
+            .init(label: "Clean",      icon: "sparkles"),
+            .init(label: "Medicine",   icon: "cross.case"),
+            .init(label: "Discipline", icon: "hand.raised"),
+            .init(label: "Toilet",     icon: "toilet"),
+        ]
+    }
 
     var body: some View {
         VStack(spacing: 12) {
@@ -168,7 +171,7 @@ private struct ActionButtonsView: View {
                         .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 10))
                     }
                     .buttonStyle(.plain)
-                    .disabled(pet.lifecycleStage == .egg)
+                    .disabled(pet.lifecycleStage == .egg || (pet.isSleeping && action.label != "Wake"))
                 }
             }
         }
@@ -180,8 +183,22 @@ private struct ActionButtonsView: View {
     }
 
     private func handleTap(_ label: String) {
-        if label == "Feed" { showingFeedMenu = true }
-        // Other actions implemented in issues #10–15
+        switch label {
+        case "Feed":  showingFeedMenu = true
+        case "Sleep": performSleep()
+        case "Wake":  performWake()
+        default: break
+        }
+    }
+
+    private func performSleep() {
+        sleepAction.putToSleep(pet: pet)
+        try? context.save()
+    }
+
+    private func performWake() {
+        sleepAction.wakeUp(pet: pet)
+        try? context.save()
     }
 
     private func performFeed(_ foodType: FeedAction.FoodType) {

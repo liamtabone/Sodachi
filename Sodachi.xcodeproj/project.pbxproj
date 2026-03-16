@@ -57,6 +57,20 @@
 		F214EB872F6763DD005040B0 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB662F6763DD005040B0 /* Pet.swift */; };
 		F214EB882F6763DD005040B0 /* DecayEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB6C2F6763DD005040B0 /* DecayEngine.swift */; };
 		FE5D95760C6E425B981ADD1C /* PetRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4AE6A0138B47B99DA556C6 /* PetRowView.swift */; };
+		AA10BB01CC334DDEAA10BB01 /* SleepAction.swift in Sources */    = {isa = PBXBuildFile; fileRef = AA10BB00CC334DDEAA10BB00 /* SleepAction.swift */; };
+		AA10BB01CC334DDEAA10BB02 /* SleepAction.swift in Sources */    = {isa = PBXBuildFile; fileRef = AA10BB00CC334DDEAA10BB00 /* SleepAction.swift */; };
+		BB20CC01DD445EEFBB20CC01 /* MiniGame.swift in Sources */       = {isa = PBXBuildFile; fileRef = BB20CC00DD445EEFBB20CC00 /* MiniGame.swift */; };
+		BB20CC01DD445EEFBB20CC02 /* MiniGame.swift in Sources */       = {isa = PBXBuildFile; fileRef = BB20CC00DD445EEFBB20CC00 /* MiniGame.swift */; };
+		BB20CC01DD445EEFBB20CC03 /* PlayAction.swift in Sources */     = {isa = PBXBuildFile; fileRef = BB20CC00DD445EEFBB20CC04 /* PlayAction.swift */; };
+		BB20CC01DD445EEFBB20CC05 /* PlayAction.swift in Sources */     = {isa = PBXBuildFile; fileRef = BB20CC00DD445EEFBB20CC04 /* PlayAction.swift */; };
+		CC30DD01EE556FF0CC30DD01 /* CleanAction.swift in Sources */    = {isa = PBXBuildFile; fileRef = CC30DD00EE556FF0CC30DD00 /* CleanAction.swift */; };
+		CC30DD01EE556FF0CC30DD02 /* CleanAction.swift in Sources */    = {isa = PBXBuildFile; fileRef = CC30DD00EE556FF0CC30DD00 /* CleanAction.swift */; };
+		DD40EE01FF667001DD40EE01 /* MedicineAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40EE00FF667001DD40EE00 /* MedicineAction.swift */; };
+		DD40EE01FF667001DD40EE02 /* MedicineAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40EE00FF667001DD40EE00 /* MedicineAction.swift */; };
+		EE50FF0100778112EE50FF01 /* DisciplineAction.swift in Sources */= {isa = PBXBuildFile; fileRef = EE50FF0000778112EE50FF00 /* DisciplineAction.swift */; };
+		EE50FF0100778112EE50FF02 /* DisciplineAction.swift in Sources */= {isa = PBXBuildFile; fileRef = EE50FF0000778112EE50FF00 /* DisciplineAction.swift */; };
+		FF601002118892230FF60100 /* ToiletAction.swift in Sources */   = {isa = PBXBuildFile; fileRef = FF601001118892230FF60100 /* ToiletAction.swift */; };
+		FF601002118892230FF60101 /* ToiletAction.swift in Sources */   = {isa = PBXBuildFile; fileRef = FF601001118892230FF60100 /* ToiletAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +113,13 @@
 		F214EB702F6763DD005040B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F214EB712F6763DD005040B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F214EB722F6763DD005040B0 /* SodachiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SodachiApp.swift; sourceTree = "<group>"; };
+		AA10BB00CC334DDEAA10BB00 /* SleepAction.swift */      = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepAction.swift;      sourceTree = "<group>"; };
+		BB20CC00DD445EEFBB20CC00 /* MiniGame.swift */         = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame.swift;         sourceTree = "<group>"; };
+		BB20CC00DD445EEFBB20CC04 /* PlayAction.swift */       = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayAction.swift;       sourceTree = "<group>"; };
+		CC30DD00EE556FF0CC30DD00 /* CleanAction.swift */      = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanAction.swift;      sourceTree = "<group>"; };
+		DD40EE00FF667001DD40EE00 /* MedicineAction.swift */   = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineAction.swift;   sourceTree = "<group>"; };
+		EE50FF0000778112EE50FF00 /* DisciplineAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisciplineAction.swift; sourceTree = "<group>"; };
+		FF601001118892230FF60100 /* ToiletAction.swift */     = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletAction.swift;     sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -135,6 +156,12 @@
 			isa = PBXGroup;
 			children = (
 				AFEC9C7C9D324D3BBA66311F /* FeedAction.swift */,
+				AA10BB00CC334DDEAA10BB00 /* SleepAction.swift */,
+				BB20CC00DD445EEFBB20CC04 /* PlayAction.swift */,
+				CC30DD00EE556FF0CC30DD00 /* CleanAction.swift */,
+				DD40EE00FF667001DD40EE00 /* MedicineAction.swift */,
+				EE50FF0000778112EE50FF00 /* DisciplineAction.swift */,
+				FF601001118892230FF60100 /* ToiletAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -222,6 +249,7 @@
 				7621428338234135A42B0389 /* PetVisualState.swift */,
 				A1B2C3D4E5F6A1B2C3D4E5F6 /* PetSpecies.swift */,
 				D1E2F3A4B5C6D1E2F3A4B5C6 /* SpeciesRegistry.swift */,
+				BB20CC00DD445EEFBB20CC00 /* MiniGame.swift */,
 				E1F2A3B4C5D6E1F2A3B4C5D6 /* Species */,
 			);
 			path = Models;
@@ -418,6 +446,13 @@
 				B1C2D3E4F5A6B1C2D3E4F5A7 /* DogSpecies.swift in Sources */,
 				C1D2E3F4A5B6C1D2E3F4A5B7 /* CatSpecies.swift in Sources */,
 				D1E2F3A4B5C6D1E2F3A4B5C7 /* SpeciesRegistry.swift in Sources */,
+				AA10BB01CC334DDEAA10BB01 /* SleepAction.swift in Sources */,
+				BB20CC01DD445EEFBB20CC01 /* MiniGame.swift in Sources */,
+				BB20CC01DD445EEFBB20CC03 /* PlayAction.swift in Sources */,
+				CC30DD01EE556FF0CC30DD01 /* CleanAction.swift in Sources */,
+				DD40EE01FF667001DD40EE01 /* MedicineAction.swift in Sources */,
+				EE50FF0100778112EE50FF01 /* DisciplineAction.swift in Sources */,
+				FF601002118892230FF60100 /* ToiletAction.swift in Sources */,
 				B3E21CA62B8F4D70A1C53E00 /* ContentView.swift in Sources */,
 				B3E21CA52B8F4D70A1C53E00 /* SodachiApp.swift in Sources */,
 			);
@@ -447,6 +482,13 @@
 				B1C2D3E4F5A6B1C2D3E4F5A8 /* DogSpecies.swift in Sources */,
 				C1D2E3F4A5B6C1D2E3F4A5B8 /* CatSpecies.swift in Sources */,
 				D1E2F3A4B5C6D1E2F3A4B5C8 /* SpeciesRegistry.swift in Sources */,
+				AA10BB01CC334DDEAA10BB02 /* SleepAction.swift in Sources */,
+				BB20CC01DD445EEFBB20CC02 /* MiniGame.swift in Sources */,
+				BB20CC01DD445EEFBB20CC05 /* PlayAction.swift in Sources */,
+				CC30DD01EE556FF0CC30DD02 /* CleanAction.swift in Sources */,
+				DD40EE01FF667001DD40EE02 /* MedicineAction.swift in Sources */,
+				EE50FF0100778112EE50FF02 /* DisciplineAction.swift in Sources */,
+				FF601002118892230FF60101 /* ToiletAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

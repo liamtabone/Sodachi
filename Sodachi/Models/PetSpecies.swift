@@ -7,8 +7,10 @@ struct SpeciesDecayRates {
     let hungerPerHour: Double
     /// Per hour
     let happinessPerHour: Double
-    /// Per hour
+    /// Per hour (only when awake)
     let energyPerHour: Double
+    /// Per hour (only when sleeping)
+    let energyRecoveryPerHour: Double
     /// Per hour, applied when hunger is below criticalHungerThreshold
     let healthPerHourFromHunger: Double
     /// Per hour, applied when happiness is below criticalHappinessThreshold
