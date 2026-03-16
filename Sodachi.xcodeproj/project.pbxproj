@@ -157,9 +157,17 @@
 			isa = PBXGroup;
 			children = (
 				ABECBCD0CE344B70B76F31CE /* PetVisualTheme.swift */,
-				13340D8F6DC24566AB58CEC4 /* StaticImageTheme.swift */,
+				FA7AB823751742CCA085B667 /* Themes */,
 			);
 			path = VisualThemes;
+			sourceTree = "<group>";
+		};
+		FA7AB823751742CCA085B667 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				13340D8F6DC24566AB58CEC4 /* StaticImageTheme.swift */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 		F214EB6B2F6763DD005040B0 /* Preview Content */ = {
