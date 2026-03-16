@@ -141,6 +141,7 @@ private struct ActionButtonsView: View {
     private let playAction = PlayAction()
     private let cleanAction = CleanAction()
     private let medicineAction = MedicineAction()
+    private let disciplineAction = DisciplineAction()
 
     private struct Action: Identifiable {
         let id = UUID()
@@ -195,11 +196,17 @@ private struct ActionButtonsView: View {
         case "Feed":  showingFeedMenu = true
         case "Play":  performPlay()
         case "Clean":    performClean()
-        case "Medicine": performMedicine()
-        case "Sleep":    performSleep()
+        case "Medicine":   performMedicine()
+        case "Discipline": performDiscipline()
+        case "Sleep":      performSleep()
         case "Wake":  performWake()
         default: break
         }
+    }
+
+    private func performDiscipline() {
+        disciplineAction.discipline(pet: pet)
+        try? context.save()
     }
 
     private func performMedicine() {
