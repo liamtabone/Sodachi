@@ -11,21 +11,22 @@ struct DecayEngine {
         guard elapsed > 0 else { return }
 
         let hours = elapsed / 3_600
+        let rates = SpeciesRegistry.species(for: pet.species).decayRates
 
         // Primary stat decay
-        stats.hunger = max(0, stats.hunger - DecayRates.hungerPerHour * hours)
-        stats.happiness = max(0, stats.happiness - DecayRates.happinessPerHour * hours)
-        stats.energy = max(0, stats.energy - DecayRates.energyPerHour * hours)
+        stats.hunger = max(0, stats.hunger - rates.hungerPerHour * hours)
+        stats.happiness = max(0, stats.happiness - rates.happinessPerHour * hours)
+        stats.energy = max(0, stats.energy - rates.energyPerHour * hours)
         stats.age += elapsed
 
         // Secondary: health drops when hunger is critically low
-        if stats.hunger < DecayRates.criticalHungerThreshold {
-            stats.health = max(0, stats.health - DecayRates.healthPerHourFromHunger * hours)
+        if stats.hunger < rates.criticalHungerThreshold {
+            stats.health = max(0, stats.health - rates.healthPerHourFromHunger * hours)
         }
 
         // Secondary: health drops when happiness is critically low
-        if stats.happiness < DecayRates.criticalHappinessThreshold {
-            stats.health = max(0, stats.health - DecayRates.healthPerHourFromSadness * hours)
+        if stats.happiness < rates.criticalHappinessThreshold {
+            stats.health = max(0, stats.health - rates.healthPerHourFromSadness * hours)
         }
 
         // Death from health depletion

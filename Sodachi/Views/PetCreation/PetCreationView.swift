@@ -7,6 +7,7 @@ struct PetCreationView: View {
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     @State private var name = ""
+    @State private var selectedSpeciesID = DogSpecies.speciesID
     @State private var selectedThemeID = StaticImageTheme.themeID
 
     private var selectedTheme: any PetVisualTheme {
@@ -18,6 +19,15 @@ struct PetCreationView: View {
             Form {
                 Section("Name") {
                     TextField("Your pet's name", text: $name)
+                }
+
+                Section("Species") {
+                    Picker("Species", selection: $selectedSpeciesID) {
+                        ForEach(SpeciesRegistry.available, id: \.speciesID) { species in
+                            Text(species.displayName).tag(species.speciesID)
+                        }
+                    }
+                    .pickerStyle(.segmented)
                 }
 
                 Section("Theme") {
@@ -76,6 +86,7 @@ struct PetCreationView: View {
     private func createPet() {
         let pet = Pet(
             name: name.trimmingCharacters(in: .whitespaces),
+            species: selectedSpeciesID,
             visualThemeID: selectedThemeID
         )
         context.insert(pet)

@@ -23,7 +23,7 @@ final class Pet {
 
     init(
         name: String,
-        species: String = "default",
+        species: String = DogSpecies.speciesID,
         visualThemeID: String = "static"
     ) {
         self.name = name
@@ -32,6 +32,13 @@ final class Pet {
         self.lastUpdatedAt = .now
         self.lifecycleStage = .egg
         self.visualThemeID = visualThemeID
-        self.stats = PetStats()
+        let s = SpeciesRegistry.species(for: species).startingStats
+        self.stats = PetStats(
+            hunger: s.hunger,
+            happiness: s.happiness,
+            health: s.health,
+            energy: s.energy,
+            weight: s.weight
+        )
     }
 }

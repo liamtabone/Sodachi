@@ -38,7 +38,8 @@ final class DecayEngineTests: XCTestCase {
         let pet = makePet(lastUpdatedAt: date(hoursAgo: 2))
         let before = pet.stats!.hunger
         engine.process(pet: pet)
-        let expected = before - DecayRates.hungerPerHour * 2
+        let rates = SpeciesRegistry.species(for: pet.species).decayRates
+        let expected = before - rates.hungerPerHour * 2
         XCTAssertEqual(pet.stats!.hunger, expected, accuracy: 0.01)
     }
 
@@ -46,7 +47,8 @@ final class DecayEngineTests: XCTestCase {
         let pet = makePet(lastUpdatedAt: date(hoursAgo: 2))
         let before = pet.stats!.happiness
         engine.process(pet: pet)
-        let expected = before - DecayRates.happinessPerHour * 2
+        let rates = SpeciesRegistry.species(for: pet.species).decayRates
+        let expected = before - rates.happinessPerHour * 2
         XCTAssertEqual(pet.stats!.happiness, expected, accuracy: 0.01)
     }
 
@@ -54,7 +56,8 @@ final class DecayEngineTests: XCTestCase {
         let pet = makePet(lastUpdatedAt: date(hoursAgo: 2))
         let before = pet.stats!.energy
         engine.process(pet: pet)
-        let expected = before - DecayRates.energyPerHour * 2
+        let rates = SpeciesRegistry.species(for: pet.species).decayRates
+        let expected = before - rates.energyPerHour * 2
         XCTAssertEqual(pet.stats!.energy, expected, accuracy: 0.01)
     }
 
@@ -80,7 +83,8 @@ final class DecayEngineTests: XCTestCase {
 
     func testHealthDecaysWhenHungerIsCritical() {
         let pet = makePet(lastUpdatedAt: date(hoursAgo: 2))
-        pet.stats!.hunger = DecayRates.criticalHungerThreshold - 1
+        let rates = SpeciesRegistry.species(for: pet.species).decayRates
+        pet.stats!.hunger = rates.criticalHungerThreshold - 1
         pet.stats!.happiness = 80 // healthy happiness so only hunger triggers
         let healthBefore = pet.stats!.health
 
@@ -96,7 +100,8 @@ final class DecayEngineTests: XCTestCase {
     func testHealthDecaysWhenHappinessIsCritical() {
         let pet = makePet(lastUpdatedAt: date(hoursAgo: 1))
         pet.stats!.hunger = 80 // healthy hunger
-        pet.stats!.happiness = DecayRates.criticalHappinessThreshold - 1
+        let rates2 = SpeciesRegistry.species(for: pet.species).decayRates
+        pet.stats!.happiness = rates2.criticalHappinessThreshold - 1
         let healthBefore = pet.stats!.health
         engine.process(pet: pet)
         XCTAssertLessThan(pet.stats!.health, healthBefore)

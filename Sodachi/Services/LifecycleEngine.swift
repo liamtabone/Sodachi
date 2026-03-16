@@ -1,16 +1,5 @@
 import Foundation
 
-/// Age thresholds (in seconds) that trigger lifecycle stage transitions.
-/// Adjust to tune how quickly a pet progresses through its life.
-enum LifecycleThresholds {
-    static let baby: TimeInterval        = 3_600       // 1 hour
-    static let child: TimeInterval       = 43_200      // 12 hours
-    static let teen: TimeInterval        = 172_800     // 48 hours
-    static let adult: TimeInterval       = 345_600     // 96 hours  (4 days)
-    static let senior: TimeInterval      = 864_000     // 240 hours (10 days)
-    static let naturalDeath: TimeInterval = 1_296_000  // 360 hours (15 days)
-}
-
 struct LifecycleEngine {
     /// Evaluates a single pet's age and advances its lifecycle stage if thresholds are met.
     /// Dead pets are skipped. Stage only ever moves forward.
@@ -18,20 +7,21 @@ struct LifecycleEngine {
         guard pet.lifecycleStage.isAlive, let stats = pet.stats else { return }
 
         let age = stats.age
+        let thresholds = SpeciesRegistry.species(for: pet.species).lifecycleThresholds
 
         let newStage: PetLifecycleStage
         switch age {
-        case LifecycleThresholds.naturalDeath...:
+        case thresholds.naturalDeath...:
             newStage = .dead
-        case LifecycleThresholds.senior...:
+        case thresholds.senior...:
             newStage = .senior
-        case LifecycleThresholds.adult...:
+        case thresholds.adult...:
             newStage = .adult
-        case LifecycleThresholds.teen...:
+        case thresholds.teen...:
             newStage = .teen
-        case LifecycleThresholds.child...:
+        case thresholds.child...:
             newStage = .child
-        case LifecycleThresholds.baby...:
+        case thresholds.baby...:
             newStage = .baby
         default:
             newStage = .egg
