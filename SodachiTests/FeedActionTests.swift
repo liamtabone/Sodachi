@@ -97,6 +97,12 @@ final class FeedActionTests: XCTestCase {
         XCTAssertEqual(pet.stats?.hunger, 40, "Egg pet should not be fed")
     }
 
+    func testNonEggPetIsFed() {
+        let pet = makePet(hunger: 40, stage: .baby)
+        action.feed(pet: pet, foodType: .meal)
+        XCTAssertEqual(pet.stats?.hunger, 70, "Baby pet should receive meal hunger boost")
+    }
+
     func testLastUpdatedAtIsRefreshed() {
         let pet = makePet()
         let before = pet.lastUpdatedAt

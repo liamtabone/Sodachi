@@ -136,6 +136,13 @@ final class DecayEngineTests: XCTestCase {
         XCTAssertEqual(pet.stats!.health, healthBefore, "Egg pet health should not decay")
     }
 
+    func testNonEggPetDoesDecay() {
+        let pet = makePet(lastUpdatedAt: date(hoursAgo: 2), stage: .baby)
+        let hungerBefore = pet.stats!.hunger
+        engine.process(pet: pet)
+        XCTAssertLessThan(pet.stats!.hunger, hungerBefore, "Baby pet hunger should decay")
+    }
+
     // MARK: - Timestamp
 
     func testLastUpdatedAtIsRefreshedAfterProcessing() {
