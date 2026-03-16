@@ -5,6 +5,7 @@ struct PetListView: View {
     @Query(sort: \Pet.createdAt) private var pets: [Pet]
     @Environment(\.modelContext) private var context
     @State private var showingNewPetSheet = false
+    @State private var navigateToPet: Pet?
 
     private var alivePets: [Pet] { pets.filter { $0.lifecycleStage.isAlive } }
     private var deadPets: [Pet] { pets.filter { !$0.lifecycleStage.isAlive } }
@@ -30,6 +31,9 @@ struct PetListView: View {
                 }
             }
             .navigationTitle("My Pets")
+            .navigationDestination(item: $navigateToPet) { pet in
+                GameScreenView(pet: pet)
+            }
             .overlay {
                 if pets.isEmpty {
                     ContentUnavailableView(
@@ -47,36 +51,8 @@ struct PetListView: View {
                 }
             }
             .sheet(isPresented: $showingNewPetSheet) {
-                NewPetSheet()
-            }
-        }
-    }
-}
-
-// MARK: - New pet sheet (placeholder until issue #8)
-
-private struct NewPetSheet: View {
-    @Environment(\.modelContext) private var context
-    @Environment(\.dismiss) private var dismiss
-    @State private var name = ""
-
-    var body: some View {
-        NavigationStack {
-            Form {
-                TextField("Name", text: $name)
-            }
-            .navigationTitle("New Pet")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") { dismiss() }
-                }
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Create") {
-                        context.insert(Pet(name: name.trimmingCharacters(in: .whitespaces)))
-                        dismiss()
-                    }
-                    .disabled(name.trimmingCharacters(in: .whitespaces).isEmpty)
+                PetCreationView { pet in
+                    navigateToPet = pet
                 }
             }
         }

@@ -3,7 +3,7 @@ import SwiftData
 
 struct GameScreenView: View {
     let pet: Pet
-    private let theme = StaticImageTheme()
+    private var theme: any PetVisualTheme { ThemeRegistry.theme(for: pet.visualThemeID) }
 
     var body: some View {
         ScrollView {

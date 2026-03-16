@@ -74,6 +74,7 @@ final class VisualThemeTests: XCTestCase {
 
 /// Minimal `PetVisualTheme` conformance used only in tests.
 private struct StubTheme: PetVisualTheme {
+    var themeID: String { "stub" }
     var name: String { "Stub" }
     func animation(for stage: PetLifecycleStage, state: PetVisualState) -> PetAnimation {
         PetAnimation(frames: [Image(systemName: "circle")], frameDuration: 0)

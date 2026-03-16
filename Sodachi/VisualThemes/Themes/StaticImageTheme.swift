@@ -12,6 +12,7 @@ import SwiftUI
 struct StaticImageTheme: PetVisualTheme {
     static let themeID = "static"
 
+    var themeID: String { StaticImageTheme.themeID }
     var name: String { "Static" }
 
     func animation(for stage: PetLifecycleStage, state: PetVisualState) -> PetAnimation {

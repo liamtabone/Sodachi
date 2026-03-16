@@ -18,9 +18,10 @@ struct PetAnimation {
 /// Concrete implementations supply an animation for every combination of
 /// lifecycle stage and visual state.
 protocol PetVisualTheme {
+    /// Stable identifier matching `Pet.visualThemeID`.
+    var themeID: String { get }
     /// Display name shown in the theme picker.
     var name: String { get }
-
     /// Returns the animation to display for the given lifecycle stage and visual state.
     func animation(for stage: PetLifecycleStage, state: PetVisualState) -> PetAnimation
 }
