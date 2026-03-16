@@ -8,14 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		0C86038EC38F42A68AC9D341 /* GameScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C314AB9CC5455EADB7FCF3 /* GameScreenView.swift */; };
+		7241EDC23A7B4A308C48EC66 /* FeedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC9C7C9D324D3BBA66311F /* FeedAction.swift */; };
+		174219B5B7AA474BAA5FFADF /* FeedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC9C7C9D324D3BBA66311F /* FeedAction.swift */; };
+		0E32E4D458994F8C9890258E /* ThemeRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AA740E6014446B53C2138 /* ThemeRegistry.swift */; };
+		126B5B5A07674A83A3B0D72B /* PetCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39FF91DEB1459AA7C017BD /* PetCreationView.swift */; };
 		1544E3BD135C4D5FAFD7FB44 /* PetVisualState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7621428338234135A42B0389 /* PetVisualState.swift */; };
 		1EAA1BEE7344402D8122F583 /* StaticImageTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13340D8F6DC24566AB58CEC4 /* StaticImageTheme.swift */; };
 		401E6B9C681D45E592F92A8B /* GameScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C314AB9CC5455EADB7FCF3 /* GameScreenView.swift */; };
 		4284A4B318BB422B948DD3C8 /* PetVisualTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABECBCD0CE344B70B76F31CE /* PetVisualTheme.swift */; };
+		7E320C499DF2432094F1F97C /* ThemeRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AA740E6014446B53C2138 /* ThemeRegistry.swift */; };
 		81BA4CCCB50146B98972DAA2 /* PetRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4AE6A0138B47B99DA556C6 /* PetRowView.swift */; };
 		832A70A4BD21412C8BC95F87 /* StaticImageTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13340D8F6DC24566AB58CEC4 /* StaticImageTheme.swift */; };
 		9258C5484CA543B0AF4D1E8B /* PetVisualState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7621428338234135A42B0389 /* PetVisualState.swift */; };
 		986CF646EFF5496C9D056A00 /* PetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4F0603875041AEB6800529 /* PetListView.swift */; };
+		A4F041A5FDC74ACEBAE2958E /* PetCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39FF91DEB1459AA7C017BD /* PetCreationView.swift */; };
 		B3E21CA52B8F4D70A1C53E00 /* SodachiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E21CA02B8F4D70A1C53E00 /* SodachiApp.swift */; };
 		B3E21CA62B8F4D70A1C53E00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E21CA12B8F4D70A1C53E00 /* ContentView.swift */; };
 		B3E21CA72B8F4D70A1C53E00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E21CA22B8F4D70A1C53E00 /* Assets.xcassets */; };
@@ -45,10 +51,6 @@
 		F214EB882F6763DD005040B0 /* DecayEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB6C2F6763DD005040B0 /* DecayEngine.swift */; };
 		F214EB892F6763DD005040B0 /* DecayRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB6D2F6763DD005040B0 /* DecayRates.swift */; };
 		FE5D95760C6E425B981ADD1C /* PetRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4AE6A0138B47B99DA556C6 /* PetRowView.swift */; };
-		A4F041A5FDC74ACEBAE2958E /* PetCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39FF91DEB1459AA7C017BD /* PetCreationView.swift */; };
-		126B5B5A07674A83A3B0D72B /* PetCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA39FF91DEB1459AA7C017BD /* PetCreationView.swift */; };
-		7E320C499DF2432094F1F97C /* ThemeRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AA740E6014446B53C2138 /* ThemeRegistry.swift */; };
-		0E32E4D458994F8C9890258E /* ThemeRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AA740E6014446B53C2138 /* ThemeRegistry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +66,7 @@
 /* Begin PBXFileReference section */
 		13340D8F6DC24566AB58CEC4 /* StaticImageTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticImageTheme.swift; sourceTree = "<group>"; };
 		17C314AB9CC5455EADB7FCF3 /* GameScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenView.swift; sourceTree = "<group>"; };
-		CA39FF91DEB1459AA7C017BD /* PetCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCreationView.swift; sourceTree = "<group>"; };
-		E70AA740E6014446B53C2138 /* ThemeRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeRegistry.swift; sourceTree = "<group>"; };
+		AFEC9C7C9D324D3BBA66311F /* FeedAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAction.swift; sourceTree = "<group>"; };
 		7621428338234135A42B0389 /* PetVisualState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetVisualState.swift; sourceTree = "<group>"; };
 		ABECBCD0CE344B70B76F31CE /* PetVisualTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetVisualTheme.swift; sourceTree = "<group>"; };
 		AF4F0603875041AEB6800529 /* PetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetListView.swift; sourceTree = "<group>"; };
@@ -74,7 +75,9 @@
 		B3E21CA22B8F4D70A1C53E00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3E21CA32B8F4D70A1C53E00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B3E21CA42B8F4D70A1C53E00 /* Sodachi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sodachi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA39FF91DEB1459AA7C017BD /* PetCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCreationView.swift; sourceTree = "<group>"; };
 		DB4AE6A0138B47B99DA556C6 /* PetRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetRowView.swift; sourceTree = "<group>"; };
+		E70AA740E6014446B53C2138 /* ThemeRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeRegistry.swift; sourceTree = "<group>"; };
 		F214EB552F676294005040B0 /* SodachiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SodachiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F214EB642F6763DD005040B0 /* settings.local.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = settings.local.json; sourceTree = "<group>"; };
 		F214EB662F6763DD005040B0 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
@@ -117,14 +120,6 @@
 				17C314AB9CC5455EADB7FCF3 /* GameScreenView.swift */,
 			);
 			path = GameScreen;
-			sourceTree = "<group>";
-		};
-		F320C88A98564CE794DC8715 /* PetCreation */ = {
-			isa = PBXGroup;
-			children = (
-				CA39FF91DEB1459AA7C017BD /* PetCreationView.swift */,
-			);
-			path = PetCreation;
 			sourceTree = "<group>";
 		};
 		A4B372CA5AD44DEC8F513457 /* PetList */ = {
@@ -217,8 +212,17 @@
 				F214EB6C2F6763DD005040B0 /* DecayEngine.swift */,
 				F214EB6D2F6763DD005040B0 /* DecayRates.swift */,
 				F214EB6E2F6763DD005040B0 /* LifecycleEngine.swift */,
+				A138D147DEB14AC88EEE2AC3 /* Actions */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		A138D147DEB14AC88EEE2AC3 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				AFEC9C7C9D324D3BBA66311F /* FeedAction.swift */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 		F214EB732F6763DD005040B0 /* Sodachi */ = {
@@ -235,6 +239,14 @@
 				F214EB722F6763DD005040B0 /* SodachiApp.swift */,
 			);
 			path = Sodachi;
+			sourceTree = "<group>";
+		};
+		F320C88A98564CE794DC8715 /* PetCreation */ = {
+			isa = PBXGroup;
+			children = (
+				CA39FF91DEB1459AA7C017BD /* PetCreationView.swift */,
+			);
+			path = PetCreation;
 			sourceTree = "<group>";
 		};
 		FA7AB823751742CCA085B667 /* Themes */ = {
@@ -382,6 +394,7 @@
 				0C86038EC38F42A68AC9D341 /* GameScreenView.swift in Sources */,
 				A4F041A5FDC74ACEBAE2958E /* PetCreationView.swift in Sources */,
 				7E320C499DF2432094F1F97C /* ThemeRegistry.swift in Sources */,
+				7241EDC23A7B4A308C48EC66 /* FeedAction.swift in Sources */,
 				B3E21CA62B8F4D70A1C53E00 /* ContentView.swift in Sources */,
 				B3E21CA52B8F4D70A1C53E00 /* SodachiApp.swift in Sources */,
 			);
@@ -407,6 +420,7 @@
 				401E6B9C681D45E592F92A8B /* GameScreenView.swift in Sources */,
 				126B5B5A07674A83A3B0D72B /* PetCreationView.swift in Sources */,
 				0E32E4D458994F8C9890258E /* ThemeRegistry.swift in Sources */,
+				174219B5B7AA474BAA5FFADF /* FeedAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

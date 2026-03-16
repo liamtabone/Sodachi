@@ -3,7 +3,10 @@ import SwiftData
 
 struct GameScreenView: View {
     let pet: Pet
+    @Environment(\.modelContext) private var context
+    @State private var overrideVisualState: PetVisualState?
     private var theme: any PetVisualTheme { ThemeRegistry.theme(for: pet.visualThemeID) }
+    private var displayVisualState: PetVisualState { overrideVisualState ?? pet.visualState }
 
     var body: some View {
         ScrollView {
@@ -12,7 +15,9 @@ struct GameScreenView: View {
                 if let stats = pet.stats {
                     StatsHUDView(stats: stats)
                 }
-                ActionButtonsView()
+                ActionButtonsView(pet: pet, onVisualStateChange: { state in
+                    overrideVisualState = state
+                })
             }
             .padding()
         }
@@ -21,7 +26,7 @@ struct GameScreenView: View {
     }
 
     private var petDisplay: some View {
-        let animation = theme.animation(for: pet.lifecycleStage, state: pet.visualState)
+        let animation = theme.animation(for: pet.lifecycleStage, state: displayVisualState)
         return ZStack {
             RoundedRectangle(cornerRadius: 16)
                 .fill(.quaternary)
@@ -121,6 +126,13 @@ private struct StatsHUDView: View {
 // MARK: - Action buttons
 
 private struct ActionButtonsView: View {
+    let pet: Pet
+    let onVisualStateChange: (PetVisualState?) -> Void
+
+    @Environment(\.modelContext) private var context
+    @State private var showingFeedMenu = false
+    private let feedAction = FeedAction()
+
     private struct Action: Identifiable {
         let id = UUID()
         let label: String
@@ -144,8 +156,7 @@ private struct ActionButtonsView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))], spacing: 12) {
                 ForEach(actions) { action in
-                    // Actions implemented in issues #9–15
-                    Button { } label: {
+                    Button { handleTap(action.label) } label: {
                         VStack(spacing: 4) {
                             Image(systemName: action.icon)
                                 .font(.title2)
@@ -159,6 +170,26 @@ private struct ActionButtonsView: View {
                     .buttonStyle(.plain)
                 }
             }
+        }
+        .confirmationDialog("What would you like to feed?", isPresented: $showingFeedMenu) {
+            Button("Meal")  { performFeed(.meal) }
+            Button("Snack") { performFeed(.snack) }
+            Button("Cancel", role: .cancel) { }
+        }
+    }
+
+    private func handleTap(_ label: String) {
+        if label == "Feed" { showingFeedMenu = true }
+        // Other actions implemented in issues #10–15
+    }
+
+    private func performFeed(_ foodType: FeedAction.FoodType) {
+        onVisualStateChange(.eating)
+        feedAction.feed(pet: pet, foodType: foodType)
+        try? context.save()
+        Task {
+            try? await Task.sleep(nanoseconds: 1_500_000_000)
+            await MainActor.run { onVisualStateChange(nil) }
         }
     }
 }
