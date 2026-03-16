@@ -18,7 +18,7 @@ struct CatSpecies: PetSpecies {
 
     var lifecycleThresholds: SpeciesLifecycleThresholds {
         SpeciesLifecycleThresholds(
-            baby:         3_600,      // 1 hour
+            baby:         900,        // 15 minutes
             child:        57_600,     // 16 hours
             teen:         216_000,    // 60 hours
             adult:        432_000,    // 120 hours (5 days)

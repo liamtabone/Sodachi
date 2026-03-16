@@ -19,7 +19,7 @@ struct DogSpecies: PetSpecies {
 
     var lifecycleThresholds: SpeciesLifecycleThresholds {
         SpeciesLifecycleThresholds(
-            baby:         3_600,      // 1 hour
+            baby:         900,        // 15 minutes
             child:        36_000,     // 10 hours
             teen:         144_000,    // 40 hours
             adult:        288_000,    // 80 hours (~3.3 days)
