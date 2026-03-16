@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,39 @@
 		B3E21CA62B8F4D70A1C53E00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E21CA12B8F4D70A1C53E00 /* ContentView.swift */; };
 		B3E21CA72B8F4D70A1C53E00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E21CA22B8F4D70A1C53E00 /* Assets.xcassets */; };
 		B3E21CA82B8F4D70A1C53E00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E21CA32B8F4D70A1C53E00 /* Preview Assets.xcassets */; };
+		F214EB742F6763DD005040B0 /* PetLifecycleStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB672F6763DD005040B0 /* PetLifecycleStage.swift */; };
+		F214EB752F6763DD005040B0 /* SodachiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB722F6763DD005040B0 /* SodachiApp.swift */; };
+		F214EB762F6763DD005040B0 /* PetStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB682F6763DD005040B0 /* PetStats.swift */; };
+		F214EB772F6763DD005040B0 /* LifecycleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB6E2F6763DD005040B0 /* LifecycleEngine.swift */; };
+		F214EB782F6763DD005040B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB712F6763DD005040B0 /* ContentView.swift */; };
+		F214EB792F6763DD005040B0 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB662F6763DD005040B0 /* Pet.swift */; };
+		F214EB7A2F6763DD005040B0 /* DecayEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB6C2F6763DD005040B0 /* DecayEngine.swift */; };
+		F214EB7B2F6763DD005040B0 /* DecayRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB6D2F6763DD005040B0 /* DecayRates.swift */; };
+		F214EB7C2F6763DD005040B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F214EB702F6763DD005040B0 /* Assets.xcassets */; };
+		F214EB7D2F6763DD005040B0 /* settings.local.json in Resources */ = {isa = PBXBuildFile; fileRef = F214EB642F6763DD005040B0 /* settings.local.json */; };
+		F214EB7E2F6763DD005040B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F214EB6A2F6763DD005040B0 /* Preview Assets.xcassets */; };
+		F214EB7F2F6763DD005040B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F214EB702F6763DD005040B0 /* Assets.xcassets */; };
+		F214EB802F6763DD005040B0 /* settings.local.json in Resources */ = {isa = PBXBuildFile; fileRef = F214EB642F6763DD005040B0 /* settings.local.json */; };
+		F214EB812F6763DD005040B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F214EB6A2F6763DD005040B0 /* Preview Assets.xcassets */; };
+		F214EB822F6763DD005040B0 /* PetLifecycleStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB672F6763DD005040B0 /* PetLifecycleStage.swift */; };
+		F214EB832F6763DD005040B0 /* SodachiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB722F6763DD005040B0 /* SodachiApp.swift */; };
+		F214EB842F6763DD005040B0 /* PetStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB682F6763DD005040B0 /* PetStats.swift */; };
+		F214EB852F6763DD005040B0 /* LifecycleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB6E2F6763DD005040B0 /* LifecycleEngine.swift */; };
+		F214EB862F6763DD005040B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB712F6763DD005040B0 /* ContentView.swift */; };
+		F214EB872F6763DD005040B0 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB662F6763DD005040B0 /* Pet.swift */; };
+		F214EB882F6763DD005040B0 /* DecayEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB6C2F6763DD005040B0 /* DecayEngine.swift */; };
+		F214EB892F6763DD005040B0 /* DecayRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214EB6D2F6763DD005040B0 /* DecayRates.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F214EB592F676294005040B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3E21C9A2B8F4D70A1C53E00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3E21CAC2B8F4D70A1C53E00;
+			remoteInfo = Sodachi;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B3E21CA02B8F4D70A1C53E00 /* SodachiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SodachiApp.swift; sourceTree = "<group>"; };
@@ -19,10 +51,33 @@
 		B3E21CA22B8F4D70A1C53E00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3E21CA32B8F4D70A1C53E00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B3E21CA42B8F4D70A1C53E00 /* Sodachi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sodachi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F214EB552F676294005040B0 /* SodachiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SodachiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F214EB642F6763DD005040B0 /* settings.local.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = settings.local.json; sourceTree = "<group>"; };
+		F214EB662F6763DD005040B0 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		F214EB672F6763DD005040B0 /* PetLifecycleStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetLifecycleStage.swift; sourceTree = "<group>"; };
+		F214EB682F6763DD005040B0 /* PetStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetStats.swift; sourceTree = "<group>"; };
+		F214EB6A2F6763DD005040B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F214EB6C2F6763DD005040B0 /* DecayEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecayEngine.swift; sourceTree = "<group>"; };
+		F214EB6D2F6763DD005040B0 /* DecayRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecayRates.swift; sourceTree = "<group>"; };
+		F214EB6E2F6763DD005040B0 /* LifecycleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecycleEngine.swift; sourceTree = "<group>"; };
+		F214EB702F6763DD005040B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F214EB712F6763DD005040B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F214EB722F6763DD005040B0 /* SodachiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SodachiApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F214EB562F676294005040B0 /* SodachiTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SodachiTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B3E21CAB2B8F4D70A1C53E00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F214EB522F676294005040B0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,7 +90,9 @@
 		B3E21C9B2B8F4D70A1C53E00 = {
 			isa = PBXGroup;
 			children = (
+				F214EB732F6763DD005040B0 /* Sodachi */,
 				B3E21C9D2B8F4D70A1C53E00 /* Sodachi */,
+				F214EB562F676294005040B0 /* SodachiTests */,
 				B3E21C9C2B8F4D70A1C53E00 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				B3E21CA42B8F4D70A1C53E00 /* Sodachi.app */,
+				F214EB552F676294005040B0 /* SodachiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +125,56 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F214EB652F6763DD005040B0 /* .claude */ = {
+			isa = PBXGroup;
+			children = (
+				F214EB642F6763DD005040B0 /* settings.local.json */,
+			);
+			path = .claude;
+			sourceTree = "<group>";
+		};
+		F214EB692F6763DD005040B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F214EB662F6763DD005040B0 /* Pet.swift */,
+				F214EB672F6763DD005040B0 /* PetLifecycleStage.swift */,
+				F214EB682F6763DD005040B0 /* PetStats.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F214EB6B2F6763DD005040B0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F214EB6A2F6763DD005040B0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F214EB6F2F6763DD005040B0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F214EB6C2F6763DD005040B0 /* DecayEngine.swift */,
+				F214EB6D2F6763DD005040B0 /* DecayRates.swift */,
+				F214EB6E2F6763DD005040B0 /* LifecycleEngine.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F214EB732F6763DD005040B0 /* Sodachi */ = {
+			isa = PBXGroup;
+			children = (
+				F214EB652F6763DD005040B0 /* .claude */,
+				F214EB692F6763DD005040B0 /* Models */,
+				F214EB6B2F6763DD005040B0 /* Preview Content */,
+				F214EB6F2F6763DD005040B0 /* Services */,
+				F214EB702F6763DD005040B0 /* Assets.xcassets */,
+				F214EB712F6763DD005040B0 /* ContentView.swift */,
+				F214EB722F6763DD005040B0 /* SodachiApp.swift */,
+			);
+			path = Sodachi;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -87,6 +195,29 @@
 			productReference = B3E21CA42B8F4D70A1C53E00 /* Sodachi.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F214EB542F676294005040B0 /* SodachiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F214EB5D2F676294005040B0 /* Build configuration list for PBXNativeTarget "SodachiTests" */;
+			buildPhases = (
+				F214EB512F676294005040B0 /* Sources */,
+				F214EB522F676294005040B0 /* Frameworks */,
+				F214EB532F676294005040B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F214EB5A2F676294005040B0 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F214EB562F676294005040B0 /* SodachiTests */,
+			);
+			name = SodachiTests;
+			packageProductDependencies = (
+			);
+			productName = SodachiTests;
+			productReference = F214EB552F676294005040B0 /* SodachiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -94,11 +225,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1600;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					B3E21CAC2B8F4D70A1C53E00 = {
 						CreatedOnToolsVersion = 16.0;
+					};
+					F214EB542F676294005040B0 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = B3E21CAC2B8F4D70A1C53E00;
 					};
 				};
 			};
@@ -116,6 +251,7 @@
 			projectRoot = "";
 			targets = (
 				B3E21CAC2B8F4D70A1C53E00 /* Sodachi */,
+				F214EB542F676294005040B0 /* SodachiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +263,19 @@
 			files = (
 				B3E21CA82B8F4D70A1C53E00 /* Preview Assets.xcassets in Resources */,
 				B3E21CA72B8F4D70A1C53E00 /* Assets.xcassets in Resources */,
+				F214EB7F2F6763DD005040B0 /* Assets.xcassets in Resources */,
+				F214EB802F6763DD005040B0 /* settings.local.json in Resources */,
+				F214EB812F6763DD005040B0 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F214EB532F676294005040B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F214EB7C2F6763DD005040B0 /* Assets.xcassets in Resources */,
+				F214EB7D2F6763DD005040B0 /* settings.local.json in Resources */,
+				F214EB7E2F6763DD005040B0 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,12 +286,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F214EB822F6763DD005040B0 /* PetLifecycleStage.swift in Sources */,
+				F214EB832F6763DD005040B0 /* SodachiApp.swift in Sources */,
+				F214EB842F6763DD005040B0 /* PetStats.swift in Sources */,
+				F214EB852F6763DD005040B0 /* LifecycleEngine.swift in Sources */,
+				F214EB862F6763DD005040B0 /* ContentView.swift in Sources */,
+				F214EB872F6763DD005040B0 /* Pet.swift in Sources */,
+				F214EB882F6763DD005040B0 /* DecayEngine.swift in Sources */,
+				F214EB892F6763DD005040B0 /* DecayRates.swift in Sources */,
 				B3E21CA62B8F4D70A1C53E00 /* ContentView.swift in Sources */,
 				B3E21CA52B8F4D70A1C53E00 /* SodachiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F214EB512F676294005040B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F214EB742F6763DD005040B0 /* PetLifecycleStage.swift in Sources */,
+				F214EB752F6763DD005040B0 /* SodachiApp.swift in Sources */,
+				F214EB762F6763DD005040B0 /* PetStats.swift in Sources */,
+				F214EB772F6763DD005040B0 /* LifecycleEngine.swift in Sources */,
+				F214EB782F6763DD005040B0 /* ContentView.swift in Sources */,
+				F214EB792F6763DD005040B0 /* Pet.swift in Sources */,
+				F214EB7A2F6763DD005040B0 /* DecayEngine.swift in Sources */,
+				F214EB7B2F6763DD005040B0 /* DecayRates.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F214EB5A2F676294005040B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3E21CAC2B8F4D70A1C53E00 /* Sodachi */;
+			targetProxy = F214EB592F676294005040B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B3E21CAD2B8F4D70A1C53E00 /* Debug */ = {
@@ -165,7 +345,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Sodachi";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Sodachi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -193,7 +373,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Sodachi";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Sodachi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -319,6 +499,47 @@
 			};
 			name = Release;
 		};
+		F214EB5B2F676294005040B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LiamTabone.SodachiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sodachi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sodachi";
+			};
+			name = Debug;
+		};
+		F214EB5C2F676294005040B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LiamTabone.SodachiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sodachi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sodachi";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -340,8 +561,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		F214EB5D2F676294005040B0 /* Build configuration list for PBXNativeTarget "SodachiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F214EB5B2F676294005040B0 /* Debug */,
+				F214EB5C2F676294005040B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-
 	};
 	rootObject = B3E21C9A2B8F4D70A1C53E00 /* Project object */;
 }
