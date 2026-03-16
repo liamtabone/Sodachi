@@ -91,6 +91,12 @@ final class FeedActionTests: XCTestCase {
         XCTAssertEqual(pet.stats?.hunger, 40)
     }
 
+    func testEggPetIsNotFed() {
+        let pet = makePet(hunger: 40, stage: .egg)
+        action.feed(pet: pet, foodType: .meal)
+        XCTAssertEqual(pet.stats?.hunger, 40, "Egg pet should not be fed")
+    }
+
     func testLastUpdatedAtIsRefreshed() {
         let pet = makePet()
         let before = pet.lastUpdatedAt
@@ -100,8 +106,9 @@ final class FeedActionTests: XCTestCase {
 
     // MARK: - Helpers
 
-    private func makePet(hunger: Double = 50, happiness: Double = 80) -> Pet {
+    private func makePet(hunger: Double = 50, happiness: Double = 80, stage: PetLifecycleStage = .baby) -> Pet {
         let pet = Pet(name: "Taro")
+        pet.lifecycleStage = stage
         pet.stats?.hunger = hunger
         pet.stats?.happiness = happiness
         context.insert(pet)

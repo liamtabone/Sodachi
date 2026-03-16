@@ -5,7 +5,7 @@ struct DecayEngine {
     /// Processes stat decay for a single pet based on time elapsed since `lastUpdatedAt`.
     /// Dead pets are skipped. Updates `lastUpdatedAt` to `now` after processing.
     func process(pet: Pet, now: Date = .now) {
-        guard pet.lifecycleStage.isAlive, let stats = pet.stats else { return }
+        guard pet.lifecycleStage.isAlive, pet.lifecycleStage != .egg, let stats = pet.stats else { return }
 
         let elapsed = now.timeIntervalSince(pet.lastUpdatedAt)
         guard elapsed > 0 else { return }

@@ -20,9 +20,10 @@ final class DecayEngineTests: XCTestCase {
 
     // MARK: - Helpers
 
-    private func makePet(lastUpdatedAt: Date = .now) -> Pet {
+    private func makePet(lastUpdatedAt: Date = .now, stage: PetLifecycleStage = .baby) -> Pet {
         let pet = Pet(name: "Test")
         pet.lastUpdatedAt = lastUpdatedAt
+        pet.lifecycleStage = stage
         context.insert(pet)
         return pet
     }
@@ -124,6 +125,15 @@ final class DecayEngineTests: XCTestCase {
         let hungerBefore = pet.stats!.hunger
         engine.process(pet: pet)
         XCTAssertEqual(pet.stats!.hunger, hungerBefore, "Dead pet stats should not change")
+    }
+
+    func testEggPetIsSkipped() {
+        let pet = makePet(lastUpdatedAt: date(hoursAgo: 2), stage: .egg)
+        let hungerBefore = pet.stats!.hunger
+        let healthBefore = pet.stats!.health
+        engine.process(pet: pet)
+        XCTAssertEqual(pet.stats!.hunger, hungerBefore, "Egg pet hunger should not decay")
+        XCTAssertEqual(pet.stats!.health, healthBefore, "Egg pet health should not decay")
     }
 
     // MARK: - Timestamp

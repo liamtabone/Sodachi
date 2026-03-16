@@ -168,6 +168,7 @@ private struct ActionButtonsView: View {
                         .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 10))
                     }
                     .buttonStyle(.plain)
+                    .disabled(pet.lifecycleStage == .egg)
                 }
             }
         }
