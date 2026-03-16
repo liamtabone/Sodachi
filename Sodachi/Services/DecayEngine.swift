@@ -33,6 +33,28 @@ struct DecayEngine {
             stats.health = max(0, stats.health - rates.healthPerHourFromSadness * hours)
         }
 
+        // Poop accumulation
+        pet.poopProgress += rates.poopRatePerHour * hours
+        let newPoops = Int(pet.poopProgress)
+        if newPoops > 0 {
+            pet.poopCount += newPoops
+            pet.poopProgress -= Double(newPoops)
+        }
+
+        // Health degrades from uncleaned poop
+        if pet.poopCount > 0 {
+            stats.health = max(0, stats.health - rates.healthDecayPerPoopPerHour * Double(pet.poopCount) * hours)
+        }
+
+        // Toilet need accumulation; accident at 100
+        stats.toiletNeed = min(100, stats.toiletNeed + rates.toiletNeedPerHour * hours)
+        if stats.toiletNeed >= 100 {
+            stats.toiletNeed = 0
+            pet.poopCount += 1
+            stats.health    = max(0, stats.health    - 10)
+            stats.happiness = max(0, stats.happiness - 10)
+        }
+
         // Death from health depletion
         if stats.health <= 0 {
             pet.lifecycleStage = .dead

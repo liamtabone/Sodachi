@@ -27,7 +27,7 @@ struct GameScreenView: View {
 
     private var petDisplay: some View {
         let animation = theme.animation(for: pet.lifecycleStage, state: displayVisualState)
-        return ZStack {
+        return ZStack(alignment: .bottomTrailing) {
             RoundedRectangle(cornerRadius: 16)
                 .fill(.quaternary)
                 .frame(height: 200)
@@ -40,6 +40,11 @@ struct GameScreenView: View {
                 // Placeholder until real assets are added (issue #5)
                 Text(placeholderEmoji)
                     .font(.system(size: 80))
+            }
+            if pet.poopCount > 0 {
+                Text(String(repeating: "💩", count: min(pet.poopCount, 5)))
+                    .font(.title3)
+                    .padding(8)
             }
         }
     }
@@ -134,6 +139,7 @@ private struct ActionButtonsView: View {
     private let feedAction = FeedAction()
     private let sleepAction = SleepAction()
     private let playAction = PlayAction()
+    private let cleanAction = CleanAction()
 
     private struct Action: Identifiable {
         let id = UUID()
@@ -187,10 +193,16 @@ private struct ActionButtonsView: View {
         switch label {
         case "Feed":  showingFeedMenu = true
         case "Play":  performPlay()
+        case "Clean": performClean()
         case "Sleep": performSleep()
         case "Wake":  performWake()
         default: break
         }
+    }
+
+    private func performClean() {
+        cleanAction.clean(pet: pet)
+        try? context.save()
     }
 
     private func performSleep() {

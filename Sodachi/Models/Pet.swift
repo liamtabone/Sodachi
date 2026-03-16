@@ -11,6 +11,12 @@ final class Pet {
     var lifecycleStage: PetLifecycleStage
     var visualThemeID: String
     var isSleeping: Bool
+    /// Number of uncleaned poop piles present.
+    var poopCount: Int
+    /// Internal fractional accumulator for poop generation (not displayed).
+    var poopProgress: Double
+    /// Whether the pet is currently misbehaving (set by game events).
+    var isMisbehaving: Bool
 
     @Relationship(deleteRule: .cascade)
     var stats: PetStats?
@@ -35,6 +41,9 @@ final class Pet {
         self.lifecycleStage = .egg
         self.visualThemeID = visualThemeID
         self.isSleeping = false
+        self.poopCount = 0
+        self.poopProgress = 0
+        self.isMisbehaving = false
         let s = SpeciesRegistry.species(for: species).startingStats
         self.stats = PetStats(
             hunger: s.hunger,

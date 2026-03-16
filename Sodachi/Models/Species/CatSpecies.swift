@@ -13,7 +13,10 @@ struct CatSpecies: PetSpecies {
             healthPerHourFromHunger: 4.0,
             healthPerHourFromSadness: 2.0,
             criticalHungerThreshold: 20.0,
-            criticalHappinessThreshold: 20.0
+            criticalHappinessThreshold: 20.0,
+            poopRatePerHour: 0.25,
+            healthDecayPerPoopPerHour: 1.5,
+            toiletNeedPerHour: 16.0
         )
     }
 

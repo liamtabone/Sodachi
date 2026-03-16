@@ -14,7 +14,10 @@ struct DogSpecies: PetSpecies {
             healthPerHourFromHunger: 5.0,
             healthPerHourFromSadness: 3.0,
             criticalHungerThreshold: 20.0,
-            criticalHappinessThreshold: 20.0
+            criticalHappinessThreshold: 20.0,
+            poopRatePerHour: 0.33,
+            healthDecayPerPoopPerHour: 2.0,
+            toiletNeedPerHour: 20.0
         )
     }
 

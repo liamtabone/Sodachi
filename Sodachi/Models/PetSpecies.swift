@@ -17,6 +17,12 @@ struct SpeciesDecayRates {
     let healthPerHourFromSadness: Double
     let criticalHungerThreshold: Double
     let criticalHappinessThreshold: Double
+    /// Poop piles added per hour naturally (fractional, accumulated internally)
+    let poopRatePerHour: Double
+    /// Health lost per poop pile per hour
+    let healthDecayPerPoopPerHour: Double
+    /// Toilet need added per hour (0–100 scale)
+    let toiletNeedPerHour: Double
 }
 
 struct SpeciesLifecycleThresholds {

@@ -15,6 +15,10 @@ final class PetStats {
     var age: TimeInterval
     /// Arbitrary weight units. Increases with feeding, especially snacks.
     var weight: Double
+    /// 0–100. Increases over time; reaching 100 causes an accident.
+    var toiletNeed: Double
+    /// 0–100. Obedience meter; increases when disciplined appropriately.
+    var discipline: Double
 
     init(
         hunger: Double = 80,
@@ -22,7 +26,9 @@ final class PetStats {
         health: Double = 100,
         energy: Double = 100,
         age: TimeInterval = 0,
-        weight: Double = 50
+        weight: Double = 50,
+        toiletNeed: Double = 0,
+        discipline: Double = 50
     ) {
         self.hunger = hunger
         self.happiness = happiness
@@ -30,5 +36,7 @@ final class PetStats {
         self.energy = energy
         self.age = age
         self.weight = weight
+        self.toiletNeed = toiletNeed
+        self.discipline = discipline
     }
 }
