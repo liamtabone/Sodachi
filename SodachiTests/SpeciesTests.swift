@@ -88,11 +88,10 @@ final class SpeciesTests: XCTestCase {
     // MARK: - Per-species lifecycle
 
     func testDogReachesBabyBeforeCatAtSameAge() {
-        // Dog baby threshold is shorter than cat's, so at an age between the two,
-        // only the dog should have advanced to .baby
+        // Both species share the same baby threshold (15 min), so test differentiation
+        // at the child threshold instead — dog reaches child faster than cat
         let dogBaby = DogSpecies().lifecycleThresholds.baby
         let catBaby = CatSpecies().lifecycleThresholds.baby
-        // Both have the same baby threshold (1 hour), so test at child threshold instead
         let dogChild = DogSpecies().lifecycleThresholds.child
         let catChild = CatSpecies().lifecycleThresholds.child
 
