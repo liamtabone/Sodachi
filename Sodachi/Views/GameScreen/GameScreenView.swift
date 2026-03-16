@@ -133,6 +133,7 @@ private struct ActionButtonsView: View {
     @State private var showingFeedMenu = false
     private let feedAction = FeedAction()
     private let sleepAction = SleepAction()
+    private let playAction = PlayAction()
 
     private struct Action: Identifiable {
         let id = UUID()
@@ -185,6 +186,7 @@ private struct ActionButtonsView: View {
     private func handleTap(_ label: String) {
         switch label {
         case "Feed":  showingFeedMenu = true
+        case "Play":  performPlay()
         case "Sleep": performSleep()
         case "Wake":  performWake()
         default: break
@@ -199,6 +201,20 @@ private struct ActionButtonsView: View {
     private func performWake() {
         sleepAction.wakeUp(pet: pet)
         try? context.save()
+    }
+
+    private func performPlay() {
+        onVisualStateChange(.playing)
+        // Use stub game until a concrete mini-game is implemented
+        var game = StubMiniGame()
+        game.start { result in
+            playAction.play(pet: pet, result: result)
+            try? context.save()
+        }
+        Task {
+            try? await Task.sleep(nanoseconds: 1_500_000_000)
+            await MainActor.run { onVisualStateChange(nil) }
+        }
     }
 
     private func performFeed(_ foodType: FeedAction.FoodType) {
