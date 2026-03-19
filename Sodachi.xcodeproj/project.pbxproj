@@ -28,6 +28,7 @@
 		B1C2D3E4F5A6B1C2D3E4F5A8 /* DogSpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D3E4F5A6B1C2D3E4F5A6 /* DogSpecies.swift */; };
 		B3E21CA52B8F4D70A1C53E00 /* SodachiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E21CA02B8F4D70A1C53E00 /* SodachiApp.swift */; };
 		B3E21CA62B8F4D70A1C53E00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E21CA12B8F4D70A1C53E00 /* ContentView.swift */; };
+		AB01CD02EF03AB02CD01EF02 /* DebugShake.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB01CD02EF03AB01CD01EF01 /* DebugShake.swift */; };
 		B3E21CA72B8F4D70A1C53E00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E21CA22B8F4D70A1C53E00 /* Assets.xcassets */; };
 		B3E21CA82B8F4D70A1C53E00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E21CA32B8F4D70A1C53E00 /* Preview Assets.xcassets */; };
 		BB20CC01DD445EEFBB20CC01 /* MiniGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB20CC00DD445EEFBB20CC00 /* MiniGame.swift */; };
@@ -114,6 +115,7 @@
 		F214EB712F6763DD005040B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F214EB722F6763DD005040B0 /* SodachiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SodachiApp.swift; sourceTree = "<group>"; };
 		FF601001118892230FF60100 /* ToiletAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletAction.swift; sourceTree = "<group>"; };
+		AB01CD02EF03AB01CD01EF01 /* DebugShake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugShake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -216,6 +218,14 @@
 			path = Species;
 			sourceTree = "<group>";
 		};
+		AB01CD02EF03AB03CD01EF03 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				AB01CD02EF03AB01CD01EF01 /* DebugShake.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
 		F214EB652F6763DD005040B0 /* .claude */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +270,7 @@
 		F214EB732F6763DD005040B0 /* Sodachi */ = {
 			isa = PBXGroup;
 			children = (
+				AB01CD02EF03AB03CD01EF03 /* Debug */,
 				F214EB652F6763DD005040B0 /* .claude */,
 				F214EB692F6763DD005040B0 /* Models */,
 				F214EB6B2F6763DD005040B0 /* Preview Content */,
@@ -437,6 +448,7 @@
 				FF601002118892230FF60100 /* ToiletAction.swift in Sources */,
 				B3E21CA62B8F4D70A1C53E00 /* ContentView.swift in Sources */,
 				B3E21CA52B8F4D70A1C53E00 /* SodachiApp.swift in Sources */,
+				AB01CD02EF03AB02CD01EF02 /* DebugShake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
